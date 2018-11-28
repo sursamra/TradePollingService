@@ -1,0 +1,29 @@
+TradePollerService stopped at 27/11/2018 17:55:16
+Starting TradePollerService 27/11/2018 17:55:24
+TradePollerService stopped at 27/11/2018 17:58:08
+Starting TradePollerService 27/11/2018 19:00:17
+TradePollerService stopped at 27/11/2018 19:00:49
+Starting TradePollerService 27/11/2018 19:20:05
+TradePollerService stopped at 27/11/2018 19:21:01
+Starting TradePollerService 27/11/2018 19:21:09
+TradePollerService stopped at 27/11/2018 19:22:20
+Starting TradePollerService 27/11/2018 19:25:33 C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+TradePollerService stopped at 27/11/2018 19:27:58
+Starting TradePollerService 27/11/2018 19:27:59 C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+Power service issue: Services.PowerServiceException: Error retrieving power volumes
+   at Services.PowerService.CheckThrowError()
+   at Services.PowerService.GetTrades(DateTime date)
+   at TradePollerService.TradePollerService.GetData(IPowerService powerService, ILogService logService, DateTime localDateTime) in C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\TradePollerService.cs:line 62 
+ occured while getting data for PowerPosition_20181127_1928.csv.csv file 
+TradePollerService stopped at 27/11/2018 19:30:26
+Starting TradePollerService 27/11/2018 19:30:33 C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+TradePollerService stopped at 27/11/2018 19:33:57
+Starting TradePollerService 27/11/2018 19:34:06 C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+No trade data found for PowerPosition_20181127_1934.csv.csv
+No trade data found for PowerPosition_20181127_1935.csv.csv
+No trade data found for PowerPosition_20181127_1936.csv.csv
+TradePollerService stopped at 27/11/2018 19:36:49
+Starting TradePollerService at27/11/2018 19:37:30
+No trade data found for PowerPosition_20181127_1937.csv.csv
+No trade data found for PowerPosition_20181127_1938.csv.csv
+TradePollerService stopped at 27/11/2018 19:39:01

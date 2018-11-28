@@ -1,0 +1,69 @@
+﻿Installing assembly 'C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+   logfile = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.InstallLog
+Rolling back assembly 'C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+   logfile = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.InstallLog
+Installing assembly 'C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+   logfile = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.InstallLog
+Installing service TradePollerService...
+Service TradePollerService has been successfully installed.
+Creating EventLog source TradePollerService in log Application...
+Committing assembly 'C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+   logfile = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.InstallLog
+Uninstalling assembly 'C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+   logfile = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.InstallLog
+Removing EventLog source TradePollerService.
+Service TradePollerService is being removed from the system...
+Service TradePollerService was successfully removed from the system.
+Installing assembly 'C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   i = 
+   assemblypath = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+   logfile = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.InstallLog
+Installing service TradePollerService...
+Service TradePollerService has been successfully installed.
+Creating EventLog source TradePollerService in log Application...
+Committing assembly 'C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   i = 
+   assemblypath = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+   logfile = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.InstallLog
+Uninstalling assembly 'C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   assemblypath = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+   logfile = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.InstallLog
+Removing EventLog source TradePollerService.
+Service TradePollerService is being removed from the system...
+Service TradePollerService was successfully removed from the system.
+Installing assembly 'C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   i = 
+   assemblypath = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+   logfile = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.InstallLog
+Installing service TradePollerService...
+Service TradePollerService has been successfully installed.
+Creating EventLog source TradePollerService in log Application...
+Committing assembly 'C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe'.
+Affected parameters are:
+   logtoconsole = 
+   i = 
+   assemblypath = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.exe
+   logfile = C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\bin\Debug\TradePollerService.InstallLog
