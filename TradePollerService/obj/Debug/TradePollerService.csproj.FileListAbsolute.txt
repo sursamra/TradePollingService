@@ -8,3 +8,12 @@ C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\obj\D
 C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\obj\Debug\TradePollerService.pdb
 C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\obj\Debug\TradePollerService.csproj.CopyComplete
 C:\Samra\AON\Projects\Next X\Trading\TradePollerService\TradePollerService\obj\Debug\TradePollerService.csprojResolveAssemblyReference.cache
+C:\Users\ah0669059\source\repos\TradePollingService\TradePollerService\bin\Debug\TradePollerService.exe.config
+C:\Users\ah0669059\source\repos\TradePollingService\TradePollerService\bin\Debug\TradePollerService.exe
+C:\Users\ah0669059\source\repos\TradePollingService\TradePollerService\bin\Debug\TradePollerService.pdb
+C:\Users\ah0669059\source\repos\TradePollingService\TradePollerService\obj\Debug\TradePollerService.ProjectInstaller.resources
+C:\Users\ah0669059\source\repos\TradePollingService\TradePollerService\obj\Debug\TradePollerService.csproj.GenerateResource.cache
+C:\Users\ah0669059\source\repos\TradePollingService\TradePollerService\obj\Debug\TradePollerService.csproj.CoreCompileInputs.cache
+C:\Users\ah0669059\source\repos\TradePollingService\TradePollerService\obj\Debug\TradePollerService.csproj.CopyComplete
+C:\Users\ah0669059\source\repos\TradePollingService\TradePollerService\obj\Debug\TradePollerService.exe
+C:\Users\ah0669059\source\repos\TradePollingService\TradePollerService\obj\Debug\TradePollerService.pdb

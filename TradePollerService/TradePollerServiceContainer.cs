@@ -10,6 +10,7 @@ namespace TradePollerService
     {
         private static System.Timers.Timer timer;
         IPowerService powerService = ServiceFactory.GetPowerService();
+        
         ILogService logService = ServiceFactory.GetLogService();
         public TradePollerServiceContainer()
         {

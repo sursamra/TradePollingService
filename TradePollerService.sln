@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradePollerService", "TradePollerService\TradePollerService.csproj", "{654EAB15-16FC-4184-9B3E-FB24BDB31EA4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TradeServicePollerTests", "TradeServicePollerTests\TradeServicePollerTests.csproj", "{8A8943ED-1C48-4B2C-A910-BFDE5CE81355}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{654EAB15-16FC-4184-9B3E-FB24BDB31EA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{654EAB15-16FC-4184-9B3E-FB24BDB31EA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{654EAB15-16FC-4184-9B3E-FB24BDB31EA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A8943ED-1C48-4B2C-A910-BFDE5CE81355}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A8943ED-1C48-4B2C-A910-BFDE5CE81355}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A8943ED-1C48-4B2C-A910-BFDE5CE81355}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A8943ED-1C48-4B2C-A910-BFDE5CE81355}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

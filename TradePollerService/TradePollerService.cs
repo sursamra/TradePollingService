@@ -11,7 +11,34 @@ using System.Configuration;
 
 namespace TradePollerService
 {
-    class TradePollerService
+    public class LocalPowerTrade : PowerTrade
+    {
+        public new DateTime Date { get; set; }
+        public new PowerPeriod[] Periods { get; set; }
+    }
+    public interface IPollerService
+    {
+        IEnumerable<string> GetTrades(DateTime date);
+
+        //Task<IEnumerable<LocalPowerTrade>> GetTradesAsync(DateTime date);
+
+    }
+    public class TradeRepository : IPollerService
+    {
+        IPowerService powerService;
+
+        public TradeRepository(IPowerService powerServiceParam)
+        {
+            powerService = powerServiceParam;
+        }
+        public IEnumerable<string> GetTrades(DateTime date)
+        {
+            return new List<string>();
+        }
+
+    }
+
+    public class TradePollerService
     {
         #region Requirements
         /* Requirements.
@@ -37,25 +64,41 @@ namespace TradePollerService
        10.The service must provide adequate logging for production support to diagnose any issues
        */
         #endregion
-
+        const string ReportHeader = "Local Time\tVolume";
+        static readonly Dictionary<int, string> periodTimeMap = new Dictionary<int, string>();
+       
         public static void DownloadTrades(IPowerService powerService, ILogService logService)
-        {           
+        {
             DateTime localDateTime = DateTime.Now;
-            List<string> data = GetData(powerService, logService, localDateTime);
-            SaveTradeData(data, logService, localDateTime);
+            Dictionary<int, double> data = GetHourlyVolume(powerService, logService, localDateTime);
+            SaveTradeData(GetHourlyVolumeReport(data), logService, localDateTime);
         }
-        static List<string> GetData(IPowerService powerService, ILogService logService, DateTime localDateTime)
+        private static void SetupMapping()
+        {
+            if (periodTimeMap.Count == 0)
+            {
+                periodTimeMap.Add(1, "23:00");
+                periodTimeMap.Add(2, "00:00");
+                for (int t = 3; t <= 24; t++)
+                {
+                    periodTimeMap.Add(t, string.Format("{0}:00", (t - 2).ToString("D2")));
+                }
+            }
+        }
+        public static List<string> GetHourlyVolumeReport(Dictionary<int, double> hourlyVolume)
+        {
+            List<string> dataList = new List<string>();
+            SetupMapping();
+            //header
+            dataList.Add(ReportHeader);
+            //aggregate volumes
+            foreach (int period in hourlyVolume.Keys)
+                dataList.Add(string.Format("{0},{1}", periodTimeMap[period], hourlyVolume[period].ToString(".0000")));
+            return dataList;
+        }
+        public static Dictionary<int, double> GetHourlyVolume(IPowerService powerService, ILogService logService, DateTime localDateTime)
         {
             Dictionary<int, double> periodVolume = new Dictionary<int, double>();
-            List<string> dataList = new List<string>();
-
-            Dictionary<int, string> periodTimeMap = new Dictionary<int, string>();
-            periodTimeMap.Add(1, "23:00");
-            periodTimeMap.Add(2, "00:00");
-            for (int t = 3; t <= 24; t++)
-            {
-                periodTimeMap.Add(t, string.Format("{0}:00", (t - 2).ToString("D2")));
-            }
 
             try
             {
@@ -69,7 +112,7 @@ namespace TradePollerService
                             periodVolume.Add(pp.Period, pp.Volume);
                     }
                 }
-                
+
             }
             catch (Services.PowerServiceException seExp)
             {
@@ -79,15 +122,11 @@ namespace TradePollerService
             {
                 logService.Log(string.Format("Unknow error: {0} \n  occured while getting data for {1}.csv file ", exp.ToString(), GetFormattedFileName(localDateTime)));
             }
-            if (dataList.Count == 0)
+            if (periodVolume.Count == 0)
                 logService.Log(string.Format("No trade data found for {0}.csv", GetFormattedFileName(localDateTime)));
-            //header
-            dataList.Add("Local Time\tVolume");
-            //aggregate volumes
-            foreach (int period in periodVolume.Keys)
-                dataList.Add(string.Format("{0},{1}", periodTimeMap[period], periodVolume[period]));
-            return dataList;
-            //PowerPosition_YYYYMMDD_HHMM.csv            
+
+            return periodVolume;
+                
         }
         static void SaveTradeData(List<string> message, ILogService logService, DateTime localDateTime)
         {
@@ -102,8 +141,9 @@ namespace TradePollerService
         }
         static string GetFormattedFileName(DateTime localDateTime)
         {
+            //PowerPosition_YYYYMMDD_HHMM.csv       
             return string.Format("PowerPosition_{0}{1}{2}_{3}.csv", localDateTime.Year.ToString("D4"), localDateTime.Month.ToString("D2"), localDateTime.Day.ToString("D2"), localDateTime.ToString("HH:mm").Replace(":", ""));
         }
-    }    
+    }
 }
 
