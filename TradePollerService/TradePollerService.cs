@@ -11,33 +11,7 @@ using System.Configuration;
 
 namespace TradePollerService
 {
-    public class LocalPowerTrade : PowerTrade
-    {
-        public new DateTime Date { get; set; }
-        public new PowerPeriod[] Periods { get; set; }
-    }
-    public interface IPollerService
-    {
-        IEnumerable<string> GetTrades(DateTime date);
-
-        //Task<IEnumerable<LocalPowerTrade>> GetTradesAsync(DateTime date);
-
-    }
-    public class TradeRepository : IPollerService
-    {
-        IPowerService powerService;
-
-        public TradeRepository(IPowerService powerServiceParam)
-        {
-            powerService = powerServiceParam;
-        }
-        public IEnumerable<string> GetTrades(DateTime date)
-        {
-            return new List<string>();
-        }
-
-    }
-
+   
     public class TradePollerService
     {
         #region Requirements
