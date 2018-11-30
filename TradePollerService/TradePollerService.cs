@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -10,34 +10,9 @@ using System.IO;
 using System.Configuration;
 
 namespace TradePollerService
-{
-   
+{   
     public class TradePollerService
-    {
-        #region Requirements
-        /* Requirements.
-       1.Must be implemented as a Windows service using .Net 4.5 using either F# or C#.
-       2.All trade positions must be aggregated per hour(local / wall clock time).Note that for a given
-       day, the actual local start time of the day is 23:00(11 pm) on the previous day.Local time is
-       in the GMT time zone.
-       3.CSV output format must be two columns, Local Time(format 24 hour HH: MM e.g. 13:00)
-       and Volume and the first row must be a header row.
-       4.CSV filename must be PowerPosition_YYYYMMDD_HHMM.csv where YYYYMMDD is
-       year / month / day e.g. 20141220 for 20 Dec 2014 and HHMM is 24hr time hour and minutes
-       e.g. 1837.The date and time are the local time of extract.
-       5.The location of the CSV file should be stored and read from the application configuration file.
-       6.An extract must run at a scheduled time interval; every X minutes where the actual interval
-       X is stored in the application configuration file.This extract does not have to run exactly on
-       the minute and can be within +/ -1 minute of the configured interval.
-       7.It is not acceptable to miss a scheduled extract.
-       8.An extract must run when the service first starts and then run at the interval specified as
-       above.
-       9.It is acceptable for the service to only read the configuration when first starting and it does
-       not have to dynamically update if the configuration file changes.It is sufficient to require a
-       service restart when updating the configuration.
-       10.The service must provide adequate logging for production support to diagnose any issues
-       */
-        #endregion
+    {      
         const string ReportHeader = "Local Time\tVolume";
         static readonly Dictionary<int, string> periodTimeMap = new Dictionary<int, string>();
        
@@ -86,7 +61,6 @@ namespace TradePollerService
                             periodVolume.Add(pp.Period, pp.Volume);
                     }
                 }
-
             }
             catch (Services.PowerServiceException seExp)
             {
